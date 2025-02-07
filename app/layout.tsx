@@ -20,24 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Background />
-        <div className="flex min-h-screen flex-col">
-          <Navigation />
-          <main className="flex-grow">
-            <PageTransition>
-              {children}
-            </PageTransition>
-          </main>
-          <Footer />
-        </div>
-        
-        {/* Background Gradient Elements */}
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob" />
-          <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000" />
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000" />
-        </div>
+        <Navigation />
+        <main className="flex-grow">
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </main>
+        <Footer />
       </body>
     </html>
   );
