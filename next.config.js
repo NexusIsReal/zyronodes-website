@@ -6,7 +6,11 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      'cdn.cloudflare.steamstatic.com'
+      'cdn.cloudflare.steamstatic.com',
+      'fivem.net',
+      'img.utdstc.com',
+      'www.playrust.nl',
+      'playrust.nl'
     ],
     minimumCacheTTL: 60,
   },
